@@ -28,6 +28,7 @@ Versión inteligente de la app de mantenimiento, con automatizaciones y lógica 
 ├── apps/
 │   ├── mantenimiento-build/        # App integrado con S/4HANA
 │   ├── mantenimiento-inteligente/  # App inteligente con automatizaciones
+├── destination/                    # Destination para S/4HANA
 ├── scripts/                        # Scripts adicionales
 │   └── inteligente/                # Scripts para la versión inteligente
 └── README.md                       # Este archivo
