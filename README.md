@@ -19,7 +19,25 @@ Aplicación para la gestión de Órdenes de Mantenimiento integrada directamente
 
 ### 2. Órdenes de Mantenimiento - Inteligente
 Versión inteligente de la app de mantenimiento, con automatizaciones y lógica adicional.  
-> Los scripts e instrucciones estarán disponibles en la carpeta [`/scripts/inteligente`](./scripts/inteligente).
+
+Url de la solicitud ChatGPT:
+```
+https://api.openai.com/v1/chat/completions
+```
+
+Headers de la solicitud ChatGPT(Key y Value):
+```
+Content-Type
+application/json
+
+Authorization
+Bearer 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
+```
+
+Payload de la solicitud ChatGPT:
+```
+{  "model": "gpt-4.1",  "messages": [    {      "role": "user",      "content": [        {          "type": "image_url",          "image_url": {            "url": appVars.ImgBase64      }        },        {          "type": "text",          "text": "Describe brevemente qué es el objeto de la imagen e identifica problemas o defectos en el objeto sin decir 'el objeto de la imagen...', ve directamente a la descripción y al problema o defecto."  }      ]    }  ],  "max_tokens": 1000}
+```
 
 ---
 
