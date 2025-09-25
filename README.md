@@ -20,6 +20,11 @@ Aplicación para la gestión de Órdenes de Mantenimiento integrada directamente
 ### 2. Órdenes de Mantenimiento - Inteligente
 Versión inteligente de la app de mantenimiento, con automatizaciones y lógica adicional.  
 
+Fórmula de conversión de imágenes:
+```
+"data:image/png;base64," + outputs["Convert file to base64"].base64
+```
+
 Url de la solicitud ChatGPT:
 ```
 https://api.openai.com/v1/chat/completions
@@ -37,6 +42,11 @@ Bearer sk-proj-Zt7irerV91L8jbFWKzvJmpdX8KOIi-Lt7RgVcGHJJ-jAdajtqY2K_evFCf1Rlp-vM
 Payload de la solicitud ChatGPT:
 ```
 {  "model": "gpt-4.1",  "messages": [    {      "role": "user",      "content": [        {          "type": "image_url",          "image_url": {            "url": appVars.ImgBase64      }        },        {          "type": "text",          "text": "Describe brevemente qué es el objeto de la imagen e identifica problemas o defectos en el objeto sin decir 'el objeto de la imagen...', ve directamente a la descripción y al problema o defecto."  }      ]    }  ],  "max_tokens": 1000}
+```
+
+Fórmula para obtener el resultado de ChatGPT:
+```
+STRING(outputs["HTTP request"].resBodyParsed.choices[0].message.content)
 ```
 
 ---
