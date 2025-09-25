@@ -36,7 +36,7 @@ Content-Type
 application/json
 
 Authorization
-Bearer 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
+Bearer [APIKEY EN GRUPO DE WHATSAPP]
 ```
 
 Payload de la solicitud ChatGPT:
